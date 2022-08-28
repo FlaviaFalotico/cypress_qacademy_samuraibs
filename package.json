@@ -1,0 +1,13 @@
+{
+  "name": "samuraibs-tests",
+  "version": "1.0.0",
+  "description": "Projeto de Testes de Aceitação de Ponta a Ponta em Cypress",
+  "main": "index.js",
+  "author": "Flávia Falotico",
+  "license": "MIT",
+  "devDependencies": {
+    "@faker-js/faker": "^7.4.0",
+    "cypress": "^10.6.0",
+    "pg": "^8.8.0"
+  }
+}
