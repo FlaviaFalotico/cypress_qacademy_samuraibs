@@ -6,15 +6,16 @@ module.exports = defineConfig({
     baseUrl: "http://localhost:3000/",
     viewportWidth: 1440,
     viewportHeight: 900,
+    dbConfig: {
+      host: "heffalump.db.elephantsql.com",
+      user: "fczszxft",
+      password: "TtkIYgN4b_XSmSmg4J1TukHBhpgPbssc",
+      database: "fczszxft",
+      port: 5432,
+    },
 
     setupNodeEvents(on, config) {
-      const pool = new Pool({
-        host: "heffalump.db.elephantsql.com",
-        user: "fczszxft",
-        password: "TtkIYgN4b_XSmSmg4J1TukHBhpgPbssc",
-        database: "fczszxft",
-        port: 5432,
-      });
+      const pool = new Pool(config.dbConfig);
 
       on("task", {
         removeUser(email) {
