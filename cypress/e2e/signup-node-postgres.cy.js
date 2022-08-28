@@ -93,7 +93,7 @@ describe("Signup", () => {
     });
   });
 
-  context.only("Quando nenhum dos campos obrigatórios é preenchido", () => {
+  context("Quando nenhum dos campos obrigatórios é preenchido", () => {
     const alertMessages = [
       "Nome é obrigatório",
       "E-mail é obrigatório",
