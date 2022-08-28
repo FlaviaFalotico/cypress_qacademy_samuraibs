@@ -1,3 +1,3 @@
 node_modules
 cypress/e2e/signup-tests
-yarn.lock
+yarn.lock 
