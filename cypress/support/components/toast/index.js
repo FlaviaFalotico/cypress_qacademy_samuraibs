@@ -3,7 +3,7 @@
 import {el} from "./elements"
 
 class Toast {
-    shouldHeveText(expectText) {
+    shouldHaveText(expectText) {
         cy.get(el.toast)
           .should("be.visible")
           .find("p")

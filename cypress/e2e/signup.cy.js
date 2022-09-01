@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 
 import { go, form, submit, alertHaveText } from "../support/pages/signup/index";
-import { shouldHeveText } from "../support/components/toast/index";
+import { shouldHaveText } from "../support/components/toast";
 
 describe("Signup", () => {
   beforeEach(() => {
@@ -24,7 +24,7 @@ describe("Signup", () => {
     it("Deve cadastrar com sucesso", () => {
       form(user);
       submit();
-      shouldHeveText(
+      shouldHaveText(
         "Agora você se tornou um(a) Samurai, faça seu login para ver seus agendamentos!"
       );
     });
@@ -45,7 +45,7 @@ describe("Signup", () => {
     it("Não deve cadastrar o usuário.", () => {
       form(user);
       submit();
-      shouldHeveText("Email já cadastrado para outro usuário.");
+      shouldHaveText("Email já cadastrado para outro usuário.");
     });
   });
 
