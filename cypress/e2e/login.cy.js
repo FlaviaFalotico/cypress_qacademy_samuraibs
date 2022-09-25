@@ -1,8 +1,9 @@
 /// <reference types="cypress" />
 
-import { go, form, submit, alertHaveText} from "../support/pages/login";
+import { go, form, submit} from "../support/pages/login";
 import dashPage from "../support/pages/dashboard";
 import { shouldHaveText } from "../support/components/toast";
+import { haveText } from "../support/components/alert";
 
 describe("Login", () => {
   context("Quando o usuário possui uma conta cadastrada e ativa", () => {
@@ -73,7 +74,7 @@ describe("Login", () => {
 
         form(user);
         submit();
-        alertHaveText("Informe um email válido");
+        haveText("Informe um email válido");
       });
     });
   });

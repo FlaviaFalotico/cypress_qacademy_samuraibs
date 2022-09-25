@@ -2,6 +2,7 @@
 
 import { go, form, submit, alertHaveText } from "../support/pages/signup/index";
 import { shouldHaveText } from "../support/components/toast";
+import { haveText } from "../support/components/alert";
 
 describe("Signup", () => {
   beforeEach(() => {
@@ -60,7 +61,7 @@ describe("Signup", () => {
     it("Deve exibir mesnsagem de alerta", () => {
       form(user);
       submit();
-      alertHaveText("Informe um email válido");
+      haveText("Informe um email válido");
     });
   });
 
@@ -81,7 +82,7 @@ describe("Signup", () => {
     });
 
     afterEach(() => {
-      alertHaveText("Pelo menos 6 caracteres");
+      haveText("Pelo menos 6 caracteres");
     });
   });
 
@@ -98,7 +99,7 @@ describe("Signup", () => {
 
     alertMessages.forEach((alert) => {
       it("Deve exibir " + alert.toLocaleLowerCase(), () => {
-        alertHaveText(alert);
+        haveText(alert);
       });
     });
   });
