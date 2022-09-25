@@ -32,6 +32,20 @@ module.exports = defineConfig({
             );
           });
         },
+
+        findToken(email) {
+          return new Promise(function(resolve) {
+            pool.query(
+              `SELECT ut.token FROM users u INNER JOIN user_tokens ut ON u.id = ut.user_id WHERE u.email = $1 ORDER BY ut.created_at`, [email],
+              function (error, result) {
+                if (error) {
+                  throw error;
+                }
+                resolve({ token: result.rows[0].token });
+              }
+            )
+          })
+        }
       });
     },
   },

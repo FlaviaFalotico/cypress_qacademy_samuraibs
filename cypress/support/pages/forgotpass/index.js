@@ -13,7 +13,7 @@ class ForgotPassPage {
     cy.visit("/forgot-password");
   }
 
-  form() {
+  form(email) {
     cy.get(el.email).clear().type(email);
   }
 

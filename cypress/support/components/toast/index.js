@@ -4,7 +4,7 @@ import {el} from "./elements"
 
 class Toast {
     shouldHaveText(expectText) {
-        cy.get(el.toast, {timeout: 10000})
+        cy.get(el.toast, {timeout: 15000})
           .should("be.visible")
           .find("p")
           .should("have.text", expectText);
