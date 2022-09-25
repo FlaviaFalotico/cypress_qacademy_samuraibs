@@ -31,7 +31,7 @@ describe("Login", () => {
       nome: "Celso Kamura",
       email: "kamura@samuraibs.com",
       password: "abc123",
-      is_provider: true,
+      is_provider: true
     };
 
     before( () => {

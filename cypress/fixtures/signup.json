@@ -1,0 +1,28 @@
+{
+  "success": {
+    "name": "Homer Simpson",
+    "email": "homSim@gmail.com",
+    "password": "homSim123"
+  },
+  
+  "email_exist": {
+    "name": "Marge Simpson",
+    "email": "marSim@gmail.com",
+    "password": "marSim123",
+    "is_provider": true 
+  },
+
+  "email_inv": {    
+      "name": "Lisa Simpson",
+      "email": "lisSim.gmail.com",
+      "password": "lisSim123",
+      "is_provider": true
+  },
+
+  "short_password": {
+      "name": "Barth Simpson",
+      "email": "barSim.gmail.com",
+      "password": null
+  }
+}
+
